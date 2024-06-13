@@ -1,33 +1,42 @@
 import java.util.Scanner;
 
 public class ContaTerminal {
-    public static void main(String[] args) throws Exception {
+
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
-        
+
         // Declaração de variáveis
-        int numero;
-        String agencia;
+        int numeroConta;
+        String agenciaConta;
         String nomeCliente;
-        double saldo;
-        
-        // Solicitação de dados ao usuário
-        System.out.println("Por favor, digite o número da Agência:");
-        agencia = scanner.nextLine();
-        
-        System.out.println("Por favor, digite o número da Conta:");
-        numero = scanner.nextInt(); // Inteiro
-        scanner.nextLine(); // Consumir a linha restante após o número inteiro
-        
-        System.out.println("Por favor, digite o nome do Cliente:");
+        double saldoConta;
+
+        // Coleta de dados do cliente via terminal
+        System.out.println("## Abertura de Conta Bancária ##");
+
+        System.out.print("Por favor, digite o número da agência: ");
+        agenciaConta = scanner.nextLine();
+
+        System.out.print("Digite o número da conta: ");
+        numeroConta = scanner.nextInt();
+
+        scanner.nextLine(); // Consumir quebra de linha
+
+        System.out.print("Digite o seu nome completo: ");
         nomeCliente = scanner.nextLine();
-        
-        System.out.println("Por favor, digite o saldo da Conta:");
-        saldo = scanner.nextDouble();
-        
-        // Mensagem final com os dados inseridos
-        System.out.println("Olá " + nomeCliente + ", obrigado por criar uma conta em nosso banco, sua agência é " + agencia + ", conta " + numero + " e seu saldo " + saldo + " já está disponível para saque.");
-        
+
+        System.out.print("Digite o saldo inicial da conta: ");
+        saldoConta = scanner.nextDouble();
+
+        // Mensagem de boas-vindas personalizada
+        String mensagemBoasVindas = "Olá " + nomeCliente + ",\n" +
+                "Obrigado por criar uma conta em nosso banco!\n" +
+                "Sua agência é: " + agenciaConta + "\n" +
+                "Número da conta: " + numeroConta + "\n" +
+                "Saldo disponível: R$ " + saldoConta + "\n";
+
+        System.out.println("\n" + mensagemBoasVindas);
+
         scanner.close();
     }
 }
-
