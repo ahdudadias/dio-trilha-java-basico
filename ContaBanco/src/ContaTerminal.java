@@ -33,7 +33,7 @@ public class ContaTerminal {
                 "Obrigado por criar uma conta em nosso banco!\n" +
                 "Sua agência é: " + agenciaConta + "\n" +
                 "Número da conta: " + numeroConta + "\n" +
-                "Saldo disponível: R$ " + saldoConta + "\n";
+                "Saldo disponível para saque: R$ " + saldoConta + "\n";
 
         System.out.println("\n" + mensagemBoasVindas);
 
